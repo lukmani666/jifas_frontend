@@ -1,6 +1,6 @@
 'use client';
 
-import { FaTwitter, FaFacebookF, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export default function CareerFooter() {
   return (
