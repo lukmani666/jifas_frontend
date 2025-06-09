@@ -25,7 +25,7 @@ export default function PartnersTestimonial() {
           <div className="pt-1 pb-12 sm:pt-1 sm:pb-16 lg:pt-1 lg:pb-20">
             <p className="text-[#2B4B38] text-base leading-relaxed px-4 sm:px-8 lg:px-12">
               Office ipsum you must be muted. Only strategies manager every make. 
-              Effects can message that's cross-pollination activities big. 
+              Effects can message that&apos;s cross-pollination activities big. 
               Resources boys businesses closest downloaded businesses win let build. 
               Parking knowledge goto for globalize stronger. Pain scraps price they 
               believe ballpark loss job overflow.

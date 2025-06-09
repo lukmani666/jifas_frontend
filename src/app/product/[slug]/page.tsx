@@ -1,44 +1,29 @@
-'use client';
-
 import BrowseProducts from "@/components/products/browse_product";
-import FBFProductDetail from "@/components/products/fbf_product_detail";
-import FullFatProductDetail from "@/components/products/full_fat_product";
-import GSPProductDetail from "@/components/products/gsp_product_detail";
 import OurProducts from "@/components/products/our_products";
-import SoyaFlourProductDetail from "@/components/products/soya_flour_detail";
-import SoyaOilProductDetail from "@/components/products/soya_oil_product";
-import React from "react";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-const componentMap: Record<string, React.ReactNode> = {
-  'granulated-soya-protein': <GSPProductDetail />,
-  'soya-oil': <SoyaOilProductDetail />,
-  'soya-flour': <SoyaFlourProductDetail />,
-  'fortified-blended-foods': <FBFProductDetail />,
-  'full-fat-soya': <FullFatProductDetail />
-}
+const componentMap: Record<string, () => Promise<React.ReactElement>> = {
+  "granulated-soya-protein": () => import("@/components/products/gsp_product_detail").then(mod => <mod.default />),
+  "soya-oil": () => import("@/components/products/soya_oil_product").then(mod => <mod.default />),
+  "soya-flour": () => import("@/components/products/soya_flour_detail").then(mod => <mod.default />),
+  "fortified-blended-foods": () => import("@/components/products/fbf_product_detail").then(mod => <mod.default />),
+  "full-fat-soya": () => import("@/components/products/full_fat_product").then(mod => <mod.default />),
+};
 
-export default function SlugPage({ params }: PageProps) {
-  const { slug } = params;
+export default async function Page({ params }: PageProps) {
+  const { slug } = await params;
 
-  // const isGSP = slug === 'granulated-soya-protein';
+  const Component = componentMap[slug];
 
   return (
     <>
-      {componentMap[slug] ?? <OurProducts />}
-    
-    {/* {isGSP ? (
-        <GSPProductDetail />
-      ) : (
-        <OurProducts />
-    )} */}
+      {Component ? await Component() : <OurProducts />}
       <BrowseProducts />
     </>
   );
 }
-

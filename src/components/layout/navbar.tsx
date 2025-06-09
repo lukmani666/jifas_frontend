@@ -7,7 +7,6 @@ import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 
 export default function Navbar() {
-    const [showDropDown, setShowDropDown] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isProductsOpen, setIsProductsOpen] = useState(false);
     const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
@@ -71,7 +70,7 @@ export default function Navbar() {
 
                 {/* CHANGE 2: Logo - centered on mobile/tablet, left-aligned on desktop */}
                 <Link href="/" className="flex items-center space-x-2 lg:flex-initial flex-1 justify-start">
-                    <Image src="/jifas_logo.png" alt="Jifas Logo" width={50} height={50} />
+                    <Image src="/jifaslogo.png" alt="Jifas Logo" width={50} height={50} />
                     <span className="text-[#2B4B38] font-medium text-sm leading-tight hidden sm:block lg:block">
                         Just Integrated Farms <br /> & Allied Services Ltd.
                     </span>

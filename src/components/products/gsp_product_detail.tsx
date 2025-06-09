@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -43,7 +44,7 @@ export default function GSPProductDetail() {
             <p className="text-[#2C2C2C] text-sm sm:text-base lg:text-base leading-relaxed mb-8 sm:mb-10 lg:mb-12">
               Defatted soya beans with final texture as granules, suitable as a meat 
               substitute or supplement. A high-protein, meat-like texture made from defatted 
-              soya flour. It's a sustainable plant-based protein alternative
+              soya flour. It&apos;s a sustainable plant-based protein alternative
             </p>
 
             {/* Uses and Benefits Grid */}

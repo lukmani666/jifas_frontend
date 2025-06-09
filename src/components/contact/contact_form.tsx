@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
         subject: '',
         message: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -105,8 +105,8 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-sm sm:text-base text-[#2C2C2C] max-w-3xl mx-auto">
-            Have questions about our products or services? We'd love to hear from you. 
-            Send us a message and we'll respond as soon as possible.
+            Have questions about our products or services? We&apos;d love to hear from you. 
+            Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
                 Contact Information
               </h3>
               <p className="text-[#2C2C2C] mb-8">
-                Reach out to us through any of the following channels. We're here to help!
+                Reach out to us through any of the following channels. We&apos;re here to help!
               </p>
             </div>
 
@@ -284,7 +284,7 @@ const Contact: React.FC = () => {
               {submitStatus === 'success' && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <p className="text-green-800 text-sm">
-                    ✅ Message sent successfully! We'll get back to you soon.
+                    ✅ Message sent successfully! We&apos;ll get back to you soon.
                   </p>
                 </div>
               )}

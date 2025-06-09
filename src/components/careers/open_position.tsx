@@ -45,7 +45,7 @@ export default function OpenPositions() {
 
         {/* Job Positions */}
         <div className="space-y-0">
-          {jobPositions.map((position, index) => (
+          {jobPositions.map((position) => (
             <div key={position.id} className="border-b border-gray-300 last:border-b-0">
               {/* Position Header */}
               <div 
