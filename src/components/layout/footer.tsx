@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import { FaTwitter, FaFacebookF, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import CareerFooter from '../careers/career_footer';
 
 export default function Footer() {

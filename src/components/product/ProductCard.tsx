@@ -3,21 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ProductCards() {
-    const productList = [
-        "Granulated Soya Protein (GSP)",
-        "Soya Oil",
-        "Soya Flour",
-        "Fortified Blended Foods (FBF)",
-        "Full Fat Soya"
-    ];
-
-    function toSlug(text: string): string {
-        return text
-            .toLowerCase()
-            .replace(/\([^)]*\)/g, '')
-            .trim()
-            .replace(/\s+/g, '-');
-    }
+    
+  function toSlug(text: string): string {
+    return text
+      .toLowerCase()
+      .replace(/\([^)]*\)/g, '')
+      .trim()
+      .replace(/\s+/g, '-');
+  }
   const products = [
     {
       id: 1,

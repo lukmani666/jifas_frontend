@@ -7,7 +7,6 @@ import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 
 export default function Navbar() {
-    const [showDropDown, setShowDropDown] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isProductsOpen, setIsProductsOpen] = useState(false);
     const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);

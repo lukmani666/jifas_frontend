@@ -41,7 +41,7 @@ export default function Gallery() {
             Gallery
           </h2>
           <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-4xl">
-            Office ipsum you must be muted. Only strategies manager every make. Effects can message that's cross-pollination 
+            Office ipsum you must be muted. Only strategies manager every make. Effects can message that&apos;s cross-pollination 
             activities big. Resources boys businesses closest downloaded businesses win let build.
           </p>
         </div>
