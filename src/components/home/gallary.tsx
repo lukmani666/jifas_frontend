@@ -35,7 +35,7 @@ const Gallery = () => {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4">
-            Gallary
+            Gallery
           </h2>
           <div className="w-20 h-0.5 bg-[#2B4B38] mx-auto"></div>
         </div>

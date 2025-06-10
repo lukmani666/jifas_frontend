@@ -92,7 +92,7 @@ export default function Navbar() {
                     </li>
 
                     <li className="relative group" ref={dropdownRef} onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}>
-                        <button className={`flex items-center gap-1 cursor-pointer relative pb-1 transition-colors duration-200 ${
+                        <button className={`flex items-center gap-1 cursor-pointer relative transition-colors duration-200 ${
                             isActiveLink('/product') 
                                 ? 'text-[#2B4B38] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#2B4B38]' 
                                 : 'hover:text-[#2B4B38]/80'
@@ -127,14 +127,14 @@ export default function Navbar() {
                     </li>
                     <li>
                         <Link 
-                            href="/gallary" 
+                            href="/gallery" 
                             className={`relative pb-1 transition-colors duration-200 ${
-                                isActiveLink('/gallary') 
+                                isActiveLink('/gallery') 
                                     ? 'text-[#2B4B38] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#2B4B38]' 
                                     : 'hover:text-[#2B4B38]/80'
                             }`}
                         >
-                            Gallary
+                            Gallery
                         </Link>
                     </li>
                     <li>
@@ -243,15 +243,15 @@ export default function Navbar() {
                         </li>
                         <li>
                             <Link 
-                                href="/gallary" 
+                                href="/gallery" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className={`block py-1 border-b-2 transition-colors duration-200 ${
-                                    isActiveLink('/gallary') 
+                                    isActiveLink('/gallery') 
                                         ? 'border-[#2B4B38] text-[#2B4B38] font-semibold' 
                                         : 'border-transparent hover:text-[#2B4B38]'
                                 }`}
                             >
-                                Gallary
+                                Gallery
                             </Link>
                         </li>
                         <li>
