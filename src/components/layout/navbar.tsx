@@ -15,11 +15,11 @@ export default function Navbar() {
     const pathname = usePathname();
 
     const products = [
+        "Full Fat Soya",
         "Granulated Soya Protein (GSP)",
         "Soya Oil",
         "Soya Flour",
-        "Fortified Blended Foods (FBF)",
-        "Full Fat Soya"
+        "Fortified Blended Foods (FBF)"
     ];
 
     // Check if link is active
@@ -70,7 +70,7 @@ export default function Navbar() {
 
                 {/* CHANGE 2: Logo - centered on mobile/tablet, left-aligned on desktop */}
                 <Link href="/" className="flex items-center space-x-2 lg:flex-initial flex-1 justify-start">
-                    <Image src="/jifaslogo.png" alt="Jifas Logo" width={50} height={50} />
+                    <Image src="/jifaslogo.png" alt="Jifas Logo" width={60} height={60} />
                     <span className="text-[#2B4B38] font-medium text-sm leading-tight hidden sm:block lg:block">
                         Just Integrated Farms <br /> & Allied Services Ltd.
                     </span>
@@ -101,13 +101,13 @@ export default function Navbar() {
                             <FiChevronDown className={`transition-transform duration-300 ${isMobileDropdownOpen ? "rotate-180" : "group-hover:rotate-180"}`} />
                         </button>
                         <ul className={`absolute top-6 left-0 bg-white text-[#2B4B38] border rounded shadow-md py-2 w-80 z-50 ${isMobileDropdownOpen ? "block" : "hidden"} group-hover:block`}>
-                            <li className="px-4 py-2 hover:bg-gray-100"><Link href="/product">Our products</Link></li>
+                            <Link href="/product"><li className="px-4 py-2 hover:bg-gray-100">All</li></Link>
                             {products.map((product) => (
-                                <li key={product} className="px-4 py-2 hover:bg-gray-100">
-                                    <Link href={`/product/${toSlug(product)}`}>
+                                <Link href={`/product/${toSlug(product)}`} key={product}>
+                                    <li className="px-4 py-2 hover:bg-gray-100">
                                         {product}
-                                    </Link>
-                                </li>
+                                    </li>
+                                </Link>
                             ))}
                             
                         </ul>

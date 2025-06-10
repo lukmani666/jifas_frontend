@@ -38,7 +38,7 @@ export default function Gallery() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
-            Gallery
+            Gallary
           </h2>
           <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-4xl">
             Office ipsum you must be muted. Only strategies manager every make. Effects can message that&apos;s cross-pollination 

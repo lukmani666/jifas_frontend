@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --font-geist-mono: 'Geist Mono', monospace;
+  --font-inter: 'Inter', sans-serif;
 }
 
 body {
-    font-family: var(--font-geist-mono);
+  font-family: var(--font-inter);
 }
