@@ -53,7 +53,7 @@ export default function HeroSlider() {
     const { title, description, image } = slides[currentSlide];
 
     return (
-        <section className="relative w-full h-[300px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+        <section className="relative w-full h-[600px] sm:h-[600px] md:h-[430px] lg:h-[530px] overflow-hidden">
             {/* Background Image */}
             <Image
                 src={image}
