@@ -103,8 +103,8 @@ export default function Navbar() {
                         <ul className={`absolute top-6 left-0 bg-white text-[#2B4B38] border rounded shadow-md py-2 w-80 z-50 ${isMobileDropdownOpen ? "block" : "hidden"} group-hover:block`}>
                             <Link href="/product"><li className="px-4 py-2 hover:bg-gray-100">All</li></Link>
                             {products.map((product) => (
-                                <Link href={`/product/${toSlug(product)}`}>
-                                    <li key={product} className="px-4 py-2 hover:bg-gray-100">
+                                <Link href={`/product/${toSlug(product)}`} key={product}>
+                                    <li className="px-4 py-2 hover:bg-gray-100">
                                         {product}
                                     </li>
                                 </Link>
