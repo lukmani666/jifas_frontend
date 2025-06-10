@@ -215,8 +215,8 @@ export default function Navbar() {
                                 Products
                             </button>
                             {isProductsOpen && (
-                                <ul className="pl-4 mt-1 space-y-1 text-sm">
-                                    <li><Link href="/product" onClick={() => setIsMenuOpen(false)}>Our product</Link></li>
+                                <ul className="pl-4 mt-1 space-y-4 text-sm">
+                                    <li><Link href="/product" onClick={() => setIsMenuOpen(false)}>All</Link></li>
                                     {products.map((product) => (
                                         <li key={product}>
                                             <Link href={`/product/${toSlug(product)}`} onClick={() => setIsMenuOpen(false)}>
