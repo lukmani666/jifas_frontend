@@ -71,7 +71,7 @@ export default function HeroSlider() {
                 </div>
             </div> */}
             <div className="absolute inset-0 bg-black/40 sm:bg-transparent" />
-            <div className="absolute inset-0 md:bg-[#2B4B38]/80 lg:bg-[#2B4B38]/80 flex items-center justify-center px-4 sm:px-6 md:px-8 text-white text-center md:m-10 lg:m-20">
+            <div className="absolute inset-0 md:bg-[#2B4B38]/80 lg:bg-[#2B4B38]/80 flex items-center justify-center px-4 sm:px-6 md:px-8 text-white text-center md:m-10 lg:m-20 rounded-2xl">
                 <div className="max-w-4xl">
                     <h2 className="text-xl sm:text-3xl md:text-5xl font-bold mb-2 sm:mb-4 leading-snug">
                     {title}
