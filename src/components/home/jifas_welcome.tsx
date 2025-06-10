@@ -1,7 +1,16 @@
 import { BiArrowToRight } from "react-icons/bi";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function JifasWelcome() {
+
+  function toSlug(text: string): string {
+    return text
+      .toLowerCase()
+      .replace(/\([^)]*\)/g, '')
+      .trim()
+      .replace(/\s+/g, '-');
+  }
   const products = [
     {
       id: 1,
@@ -67,13 +76,17 @@ export default function JifasWelcome() {
                 <p className="text-[#2B4B38] text-sm mb-4 leading-relaxed">
                   {product.description}
                 </p>
-                <button className="w-full bg-transparent border border-[#2B4B38] text-[#2B4B38] 
-                    py-2 px-4 rounded-lg hover:bg-[#2B4B38] hover:text-white transition duration-200 
-                    flex items-center justify-center gap-2 text-sm font-medium cursor-pointer"
-                >
-                  LEARN MORE
-                  <BiArrowToRight className="w-4 h-4" />
-                </button>
+                <Link href={`/product/${toSlug(product.name)}`}>
+                  <button className="w-full bg-transparent border border-[#2B4B38] text-[#2B4B38] 
+                      py-2 px-4 rounded-lg hover:bg-[#2B4B38] hover:text-white transition duration-200 
+                      flex items-center justify-center gap-2 text-sm font-medium cursor-pointer"
+                  >
+                    
+                      LEARN
+                    <BiArrowToRight className="w-4 h-4" />
+                  </button>
+                </Link>
+                
               </div>
             </div>
           ))}
@@ -81,11 +94,14 @@ export default function JifasWelcome() {
 
         {/* CTA Button */}
         <div className="text-center mt-16">
-          <button className="bg-transparent text-[#2B4B38] cursor-pointer py-3 px-8 
-            rounded-lg transition-shadow duration-200 flex items-center gap-2 mx-auto font-medium">
-            SEE ALL PRODUCTS
-            <BiArrowToRight className="w-5 h-5" />
-          </button>
+          <Link href="/product">
+          
+            <button className="bg-transparent text-[#2B4B38] cursor-pointer py-3 px-8 
+              rounded-lg transition-shadow duration-200 flex items-center gap-2 mx-auto font-medium">
+              SEE ALL PRODUCTS
+              <BiArrowToRight className="w-5 h-5" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>
