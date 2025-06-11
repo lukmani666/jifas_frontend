@@ -5,7 +5,6 @@ import {
   HiOutlinePhone, 
   HiOutlineMail, 
   HiOutlineClock,
-  HiOutlineOfficeBuilding,
   HiOutlinePaperAirplane
 } from 'react-icons/hi';
 
@@ -34,25 +33,25 @@ const Contact: React.FC = () => {
     {
       icon: HiOutlineLocationMarker,
       title: 'Address',
-      details: ['123 Business Street', 'Lagos, Nigeria', 'ZIP: 100001'],
+      details: ['Plot 3, New Oluyole Industrial Estate, Felele, Ibadan, Oyo State. Nigeria.'],
       color: 'text-blue-600'
     },
     {
       icon: HiOutlinePhone,
       title: 'Phone',
-      details: ['+234 123 456 7890', '+234 987 654 3210'],
+      details: ['+2348033485373', '+2348023034727'],
       color: 'text-green-600'
     },
     {
       icon: HiOutlineMail,
       title: 'Email',
-      details: ['info@company.com', 'sales@company.com'],
+      details: ['just.farms@yahoo.com', 'info@jifasltd.com'],
       color: 'text-purple-600'
     },
     {
       icon: HiOutlineClock,
       title: 'Business Hours',
-      details: ['Mon - Fri: 8:00 AM - 6:00 PM', 'Sat: 9:00 AM - 4:00 PM', 'Sun: Closed'],
+      details: ['Mon - Fri: 8:00 AM - 6:00 PM', 'Sat: 8:00 AM - 1:00 PM', 'Sun: Closed'],
       color: 'text-orange-600'
     }
   ];
@@ -153,11 +152,13 @@ const Contact: React.FC = () => {
             {/* Map Placeholder */}
             <div className="bg-white rounded-lg p-4 shadow-md">
               <div className="bg-gray-200 rounded-lg h-48 sm:h-64 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <HiOutlineOfficeBuilding className="w-12 h-12 mx-auto mb-2" />
-                  <p>Interactive Map</p>
-                  <p className="text-sm">Location: Lagos, Nigeria</p>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253486.32210193374!2d3.3479572867187435!3d6.9235856000000044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bd093fb4b51e1%3A0xe9cccf07ab6122ee!2sDerivatives%20Industries%20Limited!5e0!3m2!1sen!2sng!4v1749633249247!5m2!1sen!2sng"
+                  className="w-full h-full rounded-lg border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -311,7 +312,7 @@ const Contact: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+2341234567890"
+                href="tel:+2348033485373"
                 className={`font-semibold py-3 px-6 rounded-lg transition-colors duration-200 ${
                   hoveredButton === 'email' 
                     ? 'bg-transparent text-[#2B4B38] border border-[#2B4B38]' 
@@ -320,10 +321,10 @@ const Contact: React.FC = () => {
                 onMouseEnter={() => setHoveredButton('call')}
                 onMouseLeave={() => setHoveredButton(null)}
               >
-                Call Now: +234 123 456 7890
+                Call Now: +2348033485373
               </a>
               <a 
-                href="mailto:info@company.com"
+                href="mailto:info@jifasltd.com"
                 className={`font-semibold py-3 px-6 rounded-lg transition-colors duration-200 ${
                   hoveredButton === 'call' 
                     ? 'bg-[#2B4B38] text-white' 
@@ -332,7 +333,7 @@ const Contact: React.FC = () => {
                 onMouseEnter={() => setHoveredButton('email')}
                 onMouseLeave={() => setHoveredButton(null)}
               >
-                Email: info@company.com
+                Email: info@jifasltd.com
               </a>
             </div>
           </div>
