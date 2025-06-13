@@ -40,7 +40,7 @@ const BlogSuggestion = () => {
           </p>
           
           {/* Drop a Suggestion Button */}
-          <a href="mailto:info@company.com" className="inline-flex cursor-pointer items-center gap-3 bg-[#2B4B38] hover:bg-[#2d4d3a] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <a href="mailto:info@jifasltd.com" className="inline-flex cursor-pointer items-center gap-3 bg-[#2B4B38] hover:bg-[#2d4d3a] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
             <MdEmail className="w-5 h-5" />
             Drop a Suggestion
           </a >

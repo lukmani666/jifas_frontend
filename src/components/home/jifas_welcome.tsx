@@ -57,7 +57,7 @@ export default function JifasWelcome() {
         {/* Product Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {products.map((product) => (
-            <div key={product.id} className="flex flex-col items-center text-center">
+            <div key={product.id} className="flex flex-col items-center text-center h-full">
               {/* Image */}
               <div className="relative mb-6">
                 <Image
@@ -71,7 +71,7 @@ export default function JifasWelcome() {
               </div>
 
               {/* Text Content */}
-              <div className="bg-transparent p-4 w-full">
+              <div className="bg-transparent p-4 w-full flex-grow">
                 <h3 className="text-md font-bold text-[#2B4B38] mb-2">{product.name}</h3>
                 <p className="text-[#2B4B38] text-sm mb-4 leading-relaxed">
                   {product.description}
